@@ -34,7 +34,7 @@
     <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose">Request Feature</a>
   </p>
   <p align="center">
-    <a href="/docs/readme_fr.md">Français </a>
+    <a href="/docs/readme_fr.md">Français</a>
     ·
     <a href="/docs/readme_cn.md">简体中文</a>
     ·
@@ -141,7 +141,7 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 bg_color オプションで複数のカンマ区切りの値を指定してグラデーションをレンダリングすることができます。フォーマットは以下の通りになります。
 
 ```
-&bg_color=DEG,COLOR1,COLRO2,COLOR3...COLOR10
+&bg_color=DEG,COLOR1,COLOR2,COLOR3...COLOR10
 ```
 
 > キャッシュに関する注意点: Repo cards のデフォルトのキャッシュは、フォーク数とスター数が 1k 未満の場合は 30 分(1800 秒) で、それ以外の場合は 2 時間(7200) です。また、キャッシュは最低でも 30 分、最大でも 24 時間に制限されていることに注意してください。
@@ -151,6 +151,7 @@ bg_color オプションで複数のカンマ区切りの値を指定してグ�
 - `hide` - 特定の統計情報を隠す _(カンマ区切りで指定)_
 - `hide_title` - _(boolean)_
 - `hide_rank` - _(boolean)_
+- `hide_border` - _(boolean)_
 - `show_icons` - _(boolean)_
 - `include_all_commits` - 今年度のコミット数だけでなく、コミット数の総数をカウントする _(boolean)_
 - `count_private` - プライベートリポジトリへのコミットをカウントする _(boolean)_
@@ -164,6 +165,7 @@ bg_color オプションで複数のカンマ区切りの値を指定してグ�
 
 - `hide` - 特定の言語を隠す _(カンマ区切りで指定)_
 - `hide_title` - _(boolean)_
+- `hide_border` - _(boolean)_
 - `layout` - `default` か `compact` のいずれかのレイアウトに切り替える
 - `card_width` - カードの横幅 _(number)_
 
@@ -287,10 +289,10 @@ _NOTE: Top languages は、ユーザのスキルレベルを示すものでは�
 
 ```md
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
 </a>
 ```
 
