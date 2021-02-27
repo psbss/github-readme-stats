@@ -209,4 +209,57 @@ describe("Test renderStatsCard", () => {
       queryByTestId(document.body, "stars").previousElementSibling, // the label
     ).not.toHaveAttribute("x");
   });
+
+  it("should auto resize if hide_rank is true", () => {
+    document.body.innerHTML = renderStatsCard(stats, {
+      hide_rank: true,
+    });
+
+    expect(
+      document.body.getElementsByTagName("svg")[0].getAttribute("width"),
+    ).toBe("305.81250000000006");
+  });
+
+  it("should auto resize if hide_rank is true & custom_title is set", () => {
+    document.body.innerHTML = renderStatsCard(stats, {
+      hide_rank: true,
+      custom_title: "Hello world",
+    });
+
+    expect(
+      document.body.getElementsByTagName("svg")[0].getAttribute("width"),
+    ).toBe("270");
+  });
+
+  it("should render translations", () => {
+    document.body.innerHTML = renderStatsCard(stats, { locale: "cn" });
+    expect(document.getElementsByClassName("header")[0].textContent).toBe(
+      "Anurag Hazra 的 GitHub 统计",
+    );
+    expect(
+      document.querySelector(
+        'g[transform="translate(0, 0)"]>.stagger>.stat.bold',
+      ).textContent,
+    ).toBe("获标星（star）:");
+    expect(
+      document.querySelector(
+        'g[transform="translate(0, 25)"]>.stagger>.stat.bold',
+      ).textContent,
+    ).toBe(`累计提交（commit） (${new Date().getFullYear()}):`);
+    expect(
+      document.querySelector(
+        'g[transform="translate(0, 50)"]>.stagger>.stat.bold',
+      ).textContent,
+    ).toBe("提案数（PR）:");
+    expect(
+      document.querySelector(
+        'g[transform="translate(0, 75)"]>.stagger>.stat.bold',
+      ).textContent,
+    ).toBe("指出问题（issue）:");
+    expect(
+      document.querySelector(
+        'g[transform="translate(0, 100)"]>.stagger>.stat.bold',
+      ).textContent,
+    ).toBe("参与项目数:");
+  });
 });
