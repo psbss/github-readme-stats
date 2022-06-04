@@ -360,6 +360,12 @@ const themes = {
     icon_color: "ebbcba",
     text_color: "e0def4",
     bg_color: "191724",
+  },
+  "uetyo": {
+    title_color: "5D6D7E",
+    icon_color: "5D6D7E",
+    text_color: "5D6D7E",
+    bg_color: "50,74ebd5,ACB6E5",
   }
 };
 
